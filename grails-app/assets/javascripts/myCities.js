@@ -85,6 +85,13 @@ let MyCities = (function () {
             `;
 
             $('#tab-content').append($(tabContent));
+
+            let url = `/myCities/getDetailedData/${data.id}`;
+
+            $(`#tab${tabID}`).load(url, function (result) {
+                $(`#tab${tabID}`).tab('show');
+            });
+
             $(".edit").click(editHandler);
             $("#tab-list a:last").tab('show');
         } );

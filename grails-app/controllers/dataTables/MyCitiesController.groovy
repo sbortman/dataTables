@@ -19,6 +19,10 @@ class MyCitiesController {
     render contentType: 'application/java', text: ( results as JSON )
   }
 
+  def getDetailedData() {
+    [ city: City.get( params.long( 'id' ) ) ]
+  }
+
   def index() {
     def tableParams = [
         searching  : false,
