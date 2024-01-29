@@ -3,3 +3,14 @@
 *= require dataTables.bootstrap4.min.css
 *= require_self
 */
+
+[contenteditable] {
+    border: solid 1px lightgreen;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.nav-tabs > li .close {
+    margin: -2px 0 0 10px;
+    font-size: 18px;
+}
