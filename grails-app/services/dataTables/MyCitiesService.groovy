@@ -11,9 +11,7 @@ class MyCitiesService {
 
   Map<String, Object> doSomething( GrailsParameterMap params ) {
     def sortColumnIndex = params.int( 'order[0][column]' )
-//    def sortColumnName = params[ 'columns[' + sortColumnIndex + '][data]' ]
     def sortColumnName = params[ "columns[${ sortColumnIndex }][data]" as String ]
-
     def sortColumnOrder = params[ 'order[0][dir]' ]
 
     def name = params[ 'name' ]

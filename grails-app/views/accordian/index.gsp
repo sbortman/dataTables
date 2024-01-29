@@ -28,7 +28,7 @@
                                 Undergraduate Studies
                                 <span class="fa-stack fa-sm">
                                     <i class="fas fa-circle fa-stack-2x"></i>
-%{--                                    <i class="fas fa-plus fa-stack-1x fa-inverse"></i>--}%
+                                    <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
                                 </span>
                             </button>
                         </h2>
