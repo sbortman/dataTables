@@ -11,13 +11,16 @@ class MyCitiesService {
 
   Map<String, Object> doSomething( GrailsParameterMap params ) {
     def sortColumnIndex = params.int( 'order[0][column]' )
-    def sortColumnName = params[ "columns[${ sortColumnIndex }][data]" ]
+//    def sortColumnName = params[ 'columns[' + sortColumnIndex + '][data]' ]
+    def sortColumnName = params[ "columns[${ sortColumnIndex }][data]" as String ]
+
     def sortColumnOrder = params[ 'order[0][dir]' ]
 
     def name = params[ 'name' ]
     def country = params[ 'country' ]
     def population = params.int( 'population' )
     def capital = params.boolean( 'capital' )
+
 
     def cities = City.createCriteria().list(
         max: params.int( 'length' ),
@@ -39,7 +42,7 @@ class MyCitiesService {
     Map<String, Object> results = [
         draw           : params.int( 'draw' ),
         recordsTotal   : cityService.count(),
-        recordsFiltered: cities?['totalCount'],
+        recordsFiltered: cities?[ 'totalCount' ],
         data           : cities
     ]
 
