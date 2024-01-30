@@ -13,9 +13,7 @@
 </head>
 
 <body>
-
-<h1>Show City</h1>
-
+<h1>Show Details:</h1>
 
 <div id="myForm" class="container-fluid">
     <div class="row">
@@ -61,7 +59,7 @@
 </div>
 <div id="myImage" class="container-fluid">
     <div class="col">
-        <div id="sat-image" class="card" style="width: 18rem;">
+        <div id="sat-image" class="card">
             <asset:image  class="card-img-top" src="satellite-67718_1280.jpg" alt="Card image cap"/>
 
             <div class="card-body">
