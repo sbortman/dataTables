@@ -9,29 +9,32 @@
 <html>
 <head>
     <title>Details</title>
+    <asset:stylesheet src="detailsView.css"/>
 </head>
 
 <body>
+
 <h1>Show City</h1>
 
-<div class="container-fluid">
+
+<div id="myForm" class="container-fluid">
     <div class="row">
         <div class="col">
             <form>
                 <div class="form-group">
-                    <label for="name">Name</span></label>
+                    <label for="name">Name</label>
                     <input type="text" class="form-control" id="name" aria-describedby="" placeholder=""
                            value="${city?.name}">
                 </div>
 
                 <div class="form-group">
-                    <label for="">Country</label>
+                    <label for="country">Country</label>
                     <input type="text" class="form-control" id="country" aria-describedby="" placeholder=""
                            value="${city?.country}">
                 </div>
 
                 <div class="form-group">
-                    <label for="">Population</label>
+                    <label for="population">Population</label>
                     <input type="text" class="form-control" id="population" aria-describedby="" placeholder=""
                            value="${city.population}">
                 </div>
@@ -56,5 +59,24 @@
         </div>
     </div>
 </div>
+<div id="myImage" class="container-fluid">
+    <div class="col">
+        <div id="sat-image" class="card" style="width: 18rem;">
+            <asset:image  class="card-img-top" src="satellite-67718_1280.jpg" alt="Card image cap"/>
+
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<asset:javascript src="detailsView.js"/>
+<asset:script>
+    $(document).ready(function() {
+        DetailsView.init();
+     } );
+</asset:script>
+<asset:deferredScripts/>
 </body>
 </html>
